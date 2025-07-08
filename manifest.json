@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TLA Spellings: An Overview",
+  "description": "Runs a script on www.thesaurus-linguae-aegyptiae.de automatically when user installs the extension. The script creates a link to ORAEC's overviews.",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
+  "icons": {
+    "16": "images/icon16.ico",
+    "48": "images/icon48.ico",
+    "128": "images/icon128.ico"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "https://thesaurus-linguae-aegyptiae.de/lemma/*",
+        "https://tla.digital/lemma/*"
+      ]
+    }
+  ]
+}
